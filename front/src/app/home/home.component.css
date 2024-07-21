@@ -1,0 +1,64 @@
+.dashboard {
+  padding: 50px;
+  padding-top: 100px;
+  background-color: #f9f9f9;
+}
+
+.ti {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.graficos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.graficos>div {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.graficos h3 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.pizza,
+.linhas,
+.colunas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lista {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.lista h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.usuario {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.usuario-info {
+  text-align: center;
+}
+
+.usuario-info p {
+  margin: 5px 0;
+}

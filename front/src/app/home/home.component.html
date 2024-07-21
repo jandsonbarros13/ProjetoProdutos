@@ -1,0 +1,29 @@
+<app-menu></app-menu>
+<nav class="dashboard">
+  <h1 class="ti">Dashboard</h1>
+  <div class="graficos">
+    <div class="pizza">
+      <h3>Gráfico de Pizza</h3>
+      <app-pie-chart></app-pie-chart>
+    </div>
+    <div class="linhas">
+      <h3>Gráfico de Linha</h3>
+      <app-line-chart></app-line-chart>
+    </div>
+    <div class="colunas">
+      <h3>Gráfico de Colunas</h3>
+      <app-column-chart></app-column-chart>
+    </div>
+    <div class="lista">
+      <h1>Usuários</h1>
+      <div *ngFor="let usuario of usuarios" class="usuario">
+        <div class="usuario-info">
+          <p class="nome">Nome: {{ usuario.nome }}</p>
+          <p class="email">Email: {{ usuario.email }}</p>
+          <p class="acesso">Permissão: {{ usuario.acesso }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<app-footer></app-footer>

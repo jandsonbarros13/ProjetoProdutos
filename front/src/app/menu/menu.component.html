@@ -1,0 +1,18 @@
+<nav>
+  <ul>
+    <li><a routerLink="/home">Dashboard</a></li>
+    <li *ngIf="acesso === 'gerente' || acesso === 'administrador'">
+      <a routerLink="/produtos">Produtos</a>
+    </li>
+    <li *ngIf="acesso === 'administrador'">
+      <a routerLink="/usuarios">Usuarios</a>
+    </li>
+    <li
+      *ngIf="
+        acesso === 'caixa' || acesso === 'administrador' || acesso === 'gerente'
+      "
+    >
+      <a routerLink="/relatorios">Relatorios</a>
+    </li>
+  </ul>
+</nav>

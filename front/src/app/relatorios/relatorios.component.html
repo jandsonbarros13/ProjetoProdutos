@@ -1,0 +1,42 @@
+<app-menu></app-menu>
+<main>
+  <h1 class="titulo">Relatórios</h1>
+  <div class="todos-container">
+    <div class="todos">
+      <button class="relatorio-btn" (click)="gerarRelatorio('produtos')">
+        Gerar Relatório de Produtos
+      </button>
+      <div class="produtos">
+        <h1 class="titulo">Produtos Cadastrados</h1>
+        <div class="produto-container" *ngFor="let produto of produtos">
+          <div class="produto">
+            <div class="produto-info">
+              <p class="codigo">Código: {{ produto.codigo }}</p>
+              <p class="nome">Nome: {{ produto.nome }}</p>
+              <p class="preco">Preço: R$ {{ produto.preco }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="todos">
+      <button class="relatorio-btn" (click)="gerarRelatorio('usuarios')">
+        Gerar Relatório de Usuários
+      </button>
+      <div class="usuarios">
+        <h1 class="titulo">Usuários Cadastrados</h1>
+        <div class="usuario-container" *ngFor="let usuario of usuarios">
+          <div class="usuario">
+            <div class="usuario-info">
+              <p class="nome">Nome: {{ usuario.nome }}</p>
+              <p class="email">Email: {{ usuario.email }}</p>
+              <p class="senha">Senha: {{ usuario.senha }}</p>
+              <p class="acesso">Permissão: {{ usuario.acesso }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<app-footer></app-footer>

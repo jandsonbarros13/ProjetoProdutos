@@ -1,0 +1,115 @@
+main {
+  height: 100%;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.titulo {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.todos-container {
+  display: flex;
+  flex-direction: row;
+  /* Muda a direção para linha */
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  justify-content: center;
+  /* Centraliza os relatórios */
+}
+
+.todos {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  /* Garante que cada div ocupa 50% da largura */
+  max-width: 600px;
+}
+
+.relatorio-btn {
+  width: 100%;
+  padding: 15px;
+  background-color: #ffeb3b;
+  /* Cor do botão amarela */
+  color: #000;
+  /* Cor do texto preta */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.relatorio-btn:hover {
+  background-color: #fdd835;
+  /* Cor do botão ao passar o mouse amarela mais escura */
+}
+
+.produtos,
+.usuarios {
+  margin: 20px 0;
+}
+
+.produto-container,
+.usuario-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.produto,
+.usuario {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform 0.2s;
+}
+
+.produto:hover,
+.usuario:hover {
+  transform: scale(1.05);
+}
+
+.produto-info,
+.usuario-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.codigo,
+.nome,
+.preco,
+.email,
+.senha,
+.acesso {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #000;
+}
+
+.btn-excluir {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 10px 15px;
+  width: 100%;
+}
+
+.btn-excluir:hover {
+  background-color: #c82333;
+}

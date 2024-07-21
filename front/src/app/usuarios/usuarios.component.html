@@ -1,0 +1,67 @@
+<app-menu></app-menu>
+<main>
+  <form class="cadastro-form" (ngSubmit)="criarUsuario()">
+    <h1 class="titulo">Cadastrar um Usuário</h1>
+    <div class="form-group">
+      <label for="nome">Nome</label>
+      <input
+        id="nome"
+        [(ngModel)]="usuario.nome"
+        type="text"
+        name="nome"
+        placeholder="Digite seu nome"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input
+        id="email"
+        [(ngModel)]="usuario.email"
+        type="email"
+        name="email"
+        placeholder="Digite seu email"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="senha">Senha</label>
+      <input
+        id="senha"
+        [(ngModel)]="usuario.senha"
+        type="password"
+        name="senha"
+        placeholder="Digite sua senha"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="acesso">Nível de Acesso</label>
+      <select id="acesso" [(ngModel)]="usuario.acesso" name="acesso" required>
+        <option value="" disabled selected>Selecione o nível de acesso</option>
+        <option value="administrador">Administrador</option>
+        <option value="gerente">Gerente</option>
+        <option value="caixa">Caixa</option>
+      </select>
+    </div>
+    <button type="submit" class="btn">Cadastrar</button>
+  </form>
+
+  <div class="usuarios">
+    <h1 class="titulo">Usuários Cadastrados</h1>
+    <div class="usuario-container" *ngFor="let usuario of usuarios">
+      <div class="usuario">
+        <div class="usuario-info">
+          <p class="nome">Nome: {{ usuario.nome }}</p>
+          <p class="email">Email: {{ usuario.email }}</p>
+          <p class="senha">Senha: {{ usuario.senha }}</p>
+          <p class="acesso">Permissão: {{ usuario.acesso }}</p>
+        </div>
+        <button class="btn-excluir" (click)="excluirUsuario(usuario.id)">
+          Excluir
+        </button>
+      </div>
+    </div>
+  </div>
+</main>
+<app-footer></app-footer>

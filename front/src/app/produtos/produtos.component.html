@@ -1,0 +1,54 @@
+<app-menu></app-menu>
+<main>
+  <form (ngSubmit)="cadastrarProduto()" class="cadastro-form">
+    <h1 class="titulo">Cadastre Seus Produtos</h1>
+    <div class="form-group">
+      <label for="codigo">Código:</label>
+      <input
+        id="codigo"
+        type="text"
+        [(ngModel)]="produto.codigo"
+        name="codigo"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="nome">Nome:</label>
+      <input
+        id="nome"
+        type="text"
+        [(ngModel)]="produto.nome"
+        name="nome"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="preco">Preço:</label>
+      <input
+        id="preco"
+        type="number"
+        [(ngModel)]="produto.preco"
+        name="preco"
+        required
+      />
+    </div>
+    <button type="submit" class="btn">Cadastrar Produto</button>
+  </form>
+
+  <div class="produtos">
+    <h1 class="titulo">Produtos Cadastrados</h1>
+    <div class="produto-container" *ngFor="let produto of produtos">
+      <div class="produto">
+        <div class="produto-info">
+          <p class="codigo">Código: {{ produto.codigo }}</p>
+          <p class="nome">Nome: {{ produto.nome }}</p>
+          <p class="preco">Preço: {{ produto.preco }}</p>
+        </div>
+        <button class="btn-excluir" (click)="excluirProduto(produto.id)">
+          Excluir
+        </button>
+      </div>
+    </div>
+  </div>
+</main>
+<app-footer></app-footer>
